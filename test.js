@@ -26,9 +26,9 @@ t('i-set methods', function() {
 	t('===', iset._map.size, 2)
 	t('===', iset._arr.length, 2)
 	// get
-	t('===', iset.get('a'), 0, 'get')
-	t('===', iset.get('b'), undefined, 'get')
-	t('===', iset.get('c'), 1, 'get')
+	t('===', iset.indexOf('a'), 0, 'get')
+	t('===', iset.indexOf('b'), -1, 'get')
+	t('===', iset.indexOf('c'), 1, 'get')
 	// forEach
 	var str=''
 	iset.forEach(function(k,i) { str+=k+i })
@@ -40,7 +40,7 @@ t('i-set methods', function() {
 	t('===', iset.add('b').add('c').add('a').size, 3)
 	t('{==}', iset.order([1,0,2])._arr, ['c', 'b', 'a'])
 	t('{==}', iset.sort()._arr, ['a', 'b', 'c'])
-	t('===', iset.get('b'), 1)
+	t('===', iset.indexOf('b'), 1)
 	//index
 	t('===', iset.index(2), 'c')
 	t('===', iset.index(7), undefined)

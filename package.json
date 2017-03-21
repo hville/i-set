@@ -1,6 +1,6 @@
 {
   "name": "i-set",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "indexed Set of ordered, sortable unique values with an API similar to native Set",
   "keywords": [
     "array",
